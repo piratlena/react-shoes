@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__info {
+        display: flex;
+        align-items: center;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
+    &__text {
+        height: 40px;
+    }
+    &__title{
+        margin: 0px;
+        line-height: none;
+    }
+    
+    &__subtitle {
+        margin: 0px;
+        opacity: .5;
+        font-size: 14px;
+        transform: translateY(-7px);
+    }
+}
