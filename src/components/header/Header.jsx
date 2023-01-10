@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from '../../assets/img/main_logo.png';
 import './header.module.scss';
+import NavBar from "./NavBar";
 
 const Header =() => {
     return(
@@ -12,12 +13,7 @@ const Header =() => {
             <p className="header__subtitle">Modern sneaker shoes</p>
           </div>
         </div>
-          <ul className="d-flex">
-            <li className="mr-30">
-              <img src="/img/cart.svg" alt="cart" />
-            <span>1205 руб.</span></li>
-            <li><img src="/img/user.svg" alt="user_icon" /></li>
-          </ul>
+         <NavBar/>
         </header>
     )
 }

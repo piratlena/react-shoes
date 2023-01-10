@@ -1,1 +1,9 @@
 $green: #9DD458;
+
+$color-primary: #33dd4e;
+$color-grad-1:  #89F09C;
+$color-grad-2:  #3CC755;
+$color-grad-3: #e4fd02;
+
+$gradient: linear-gradient(to right bottom, $color-grad-1 0%, $color-grad-2 50%, $color-grad-2 100%);
+$gradient1: linear-gradient(to right bottom, $color-grad-1 0%, $color-grad-1,50% $color-grad-2 100%);

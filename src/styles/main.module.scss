@@ -1,0 +1,17 @@
+.wrapper {
+    background: #ffffff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    max-width: 1080px;
+    margin: 50px auto;
+    padding: 40px 40px 40px 40px;
+  }
+  .flex {
+    margin: 0px auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 30px;
+    grid-row-gap: 40px;
+  }

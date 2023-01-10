@@ -22,13 +22,8 @@ a {
   color: #fff;
 }
 
-  .wrapper {
-    background: #ffffff;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.04);
-    border-radius: 20px;
-    max-width: 1080px;
-    margin: 50px auto;
-    padding: 0px 40px 0px 40px;
-  }
 
-  @import '../components/header/header.module.scss'
+  @import './main.module.scss';
+  @import '../components/header/header.module.scss';
+  @import '../components/header/navbar.module.scss';
+  @import '../components/card/card.module.scss';
