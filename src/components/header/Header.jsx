@@ -6,7 +6,8 @@ import NavBar from "./NavBar";
 const Header =() => {
     return(
         <header className="header">
-        <div className="header__info">
+          <div className="header__content">
+          <div className="header__info">
         <img className="header__logo" src={Logo}/>
           <div className="header__text">
             <h3 className="header__title">React Shoes</h3>
@@ -14,6 +15,9 @@ const Header =() => {
           </div>
         </div>
          <NavBar/>
+          </div>
+  
+         <hr />
         </header>
     )
 }

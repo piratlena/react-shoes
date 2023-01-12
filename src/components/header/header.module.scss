@@ -1,7 +1,9 @@
 .header {
-    display: flex;
+    &__content {
+        display: flex;
     align-items: center;
     justify-content: space-between;
+    }
     &__info {
         display: flex;
         align-items: center;
@@ -23,5 +25,9 @@
         opacity: .5;
         font-size: 14px;
         transform: translateY(-7px);
+    }
+    hr {
+        color: #F4EFE9;
+        width: 960px;
     }
 }
