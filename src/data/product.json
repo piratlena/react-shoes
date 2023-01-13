@@ -1,0 +1,133 @@
+[
+    {
+      "id": 1,
+      "name": "Nike Blazer Mid Suede",
+      "age": "adult",
+      "gender": "man",
+      "price": 23.99,
+      "image": "/img/shoes/item_1.jpg",
+      "description": "Мужские Кроссовки Nike Blazer Mid Suede",
+      "size":["42", "43", "44"]
+    },
+  
+    {
+      "id": 2,
+      "name": "Nike Air Max 270",
+      "age": "adult",
+      "gender": "man",
+      "price": 27.99,
+      "image": "/img/shoes/item_2.jpg",
+      "description": "Мужские Кроссовки Nike Air Max 270",
+      "size":["42", "44", "45"]
+    },
+  
+    {
+      "id": 3,
+      "name": "Nike Blazer Mid Suede",
+      "age": "adult",
+      "gender": "man",
+      "price": 30.99,
+      "image": "/img/shoes/item_3.jpg",
+      "description": "Мужские Кроссовки Nike Blazer Mid Suede",
+      "size":["41","42", "44", "45"]
+    },
+  
+    {
+      "id": 4,
+      "name": "Puma X Aka Boku Future Rider",
+      "age": "adult",
+      "gender": "man",
+      "price": 40.99,
+      "image": "/img/shoes/item_4.jpg",
+      "description": "Кроссовки Puma X Aka Boku Future Rider",
+      "size":["41","42", "45"]
+    },
+  
+    {
+      "id": 5,
+      "name": "Under Armour Curry 8",
+      "age": "adult",
+      "gender": "man",
+      "price": 45.99,
+      "image": "/img/shoes/item_5.jpg",
+      "description": "Мужские Кроссовки Under Armour Curry 8",
+      "size":["41","42", "45", "46"]
+    },
+  
+    {
+      "id": 6,
+      "name": "Nike Kyrie 7",
+      "age": "adult",
+      "gender": "man",
+      "price": 35.99,
+      "image": "/img/shoes/item_6.jpg",
+      "description": "Мужские Кроссовки Nike Kyrie 7",
+      "size":["41","42","43", "45", "46"]
+    },
+  
+    {
+      "id": 7,
+      "name": "Jordan Air Jordan 11",
+      "age": "adult",
+      "gender": "man",
+      "price": 25.99,
+      "image": "/img/shoes/item_7.jpg",
+      "description": "Мужские Кроссовки Jordan Air Jordan 11",
+      "size":["41","42","43", "45"]
+    },
+  
+    {
+      "id": 8,
+      "name": "Jordan Air Jordan 11",
+      "age": "adult",
+      "gender": "man",
+      "price": 25.99,
+      "image": "/img/shoes/item_8.jpg",
+      "description": "Мужские Кроссовки Jordan Air Jordan 11",
+      "size":["41","42","43", "45"]
+    },
+  
+    {
+      "id": 9,
+      "name": "Nike LeBron XVIII",
+      "age": "adult",
+      "gender": "man",
+      "price": 29.99,
+      "image": "/img/shoes/item_9.jpg",
+      "description": "Мужские Кроссовки Nike LeBron XVIII",
+      "size":["41","42","43", "45", "47"]
+    },
+  
+    {
+      "id": 10,
+      "name": "Nike Lebron XVIII Low",
+      "age": "adult",
+      "gender": "man",
+      "price": 36.99,
+      "image": "/img/shoes/item_10.jpg",
+      "description": "Мужские Кроссовки Nike Lebron XVIII Low",
+      "size":["41","42","43", "45", "47"]
+    },
+  
+    {
+      "id": 11,
+      "name": "Мужские Кроссовки Nike Blazer Mid Suede",
+      "age": "adult",
+      "gender": "man",
+      "price": 46.99,
+      "image": "/img/shoes/item_11.jpg",
+      "description": "Мужские Кроссовки Nike Lebron XVIII Low",
+      "size":["43", "45", "47"]
+    },
+  
+    {
+      "id": 12,
+      "name": "Puma X Aka Boku Future Rider",
+      "age": "adult",
+      "gender": "man",
+      "price": 46.99,
+      "image": "/img/shoes/item_12.jpg",
+      "description": "Кроссовки Puma X Aka Boku Future Rider",
+      "size":["43", "45", "47"]
+    }
+  ]

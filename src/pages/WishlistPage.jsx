@@ -1,7 +1,7 @@
 
 
-const Bookmarks = () => {
+const WishlistPage = () => {
 
 }
 
-export default Bookmarks;
+export default WishlistPage;

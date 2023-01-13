@@ -1,11 +1,11 @@
-import Admin from './pages/Admin'
-import AuthPage from './pages/AuthPage'
-import CartPage from './pages/CartPage'
-import HomePage from './pages/HomePage'
-import Shop from './pages/Shop'
-import ProductPage from './pages/ProductPage'
-import WishlistPage from './consts/WishlistPage'
-import { PROFILE_ROUTE, CART_ROUTE, HOME_ROUTE, SHOP_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, PRODUCT_ROUTE, WISHLIST_ROUTE } from './utils/consts'
+
+import AuthPage from '../pages/AuthPage'
+import CartPage from '../pages/cart-page/CartPage'
+import HomePage from '../pages/HomePage'
+import ProductPage from '../pages/ProductPage'
+import WishlistPage from '../pages/WishlistPage'
+import ProfilePage from '../pages/ProfilePage'
+import { PROFILE_ROUTE, CART_ROUTE, HOME_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, PRODUCT_ROUTE, WISHLIST_ROUTE } from './consts'
 
 
 export const publicRoutes = [
@@ -26,19 +26,15 @@ export const publicRoutes = [
         Component: AuthPage
     },
     {
-        path: SHOP_ROUTE,
-        Component: Shop
-    },
-    {
         path: PRODUCT_ROUTE + '/:id',
         Component: ProductPage
     },
     {
-        path: WISHLIST_ROUTE + '/:id',
+        path: WISHLIST_ROUTE,
         Component: WishlistPage
     },
     {
-        path: PROFILE_ROUTE + '/:id',
-        Component: ProductPage
+        path: PROFILE_ROUTE,
+        Component: ProfilePage
     }
 ]

@@ -1,0 +1,21 @@
+
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &__decrement {
+        width: 30px;
+        height: 30px;
+        background: #DBDBDB;
+    }
+    &__increment {
+        width: 30px;
+        height: 30px; 
+        background: #DBDBDB;
+    }
+     input {
+        width: 40px;
+        height: 40px;
+        outline: none;
+    }
+}

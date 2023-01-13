@@ -6,13 +6,13 @@ const Card = (props) => {
  return (
     <div className="card">
         <div className="card__bookmark">
-            <img src={Bookmark} alt="bookmark" colorFill/>
+            <img src={Bookmark} alt="bookmark"/>
         </div>
-        <img width={133} height={112} src={props.imageUrl}alt="Sneakers" />
-        <h5>{props.descr}</h5>
+        <img width={133} height={112} src={props.image}alt="Sneakers" />
+        <h5>{props.description}</h5>
         <div className="card__bottom">
                 <div className="card__price">
-                <span>{props.textPrice}</span>
+                <span>Цена</span>
                 <b>{props.price}</b>
                 </div>
                 <div className="card__plus"></div>
