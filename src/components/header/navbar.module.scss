@@ -16,3 +16,18 @@
         cursor: pointer;
     }
 }
+.cart {
+    position: relative;
+    &__quantity {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: red;
+        border-radius: 100%;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-30%);
+        font-size: 10px;
+        text-align: center;
+    }
+}

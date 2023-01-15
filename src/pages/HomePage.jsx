@@ -22,6 +22,8 @@ const HomePage = () => {
             image={obj.image}
             description={obj.description}  
             price={obj.price}
+            id={obj.id}
+            size={obj.size}
             />
         ))
       }

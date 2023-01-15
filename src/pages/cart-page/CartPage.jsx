@@ -29,7 +29,7 @@ const CartPage = () => {
             size:["42", "44", "45"]
           },
           {
-            id: 1,
+            id: 3,
             name: "Nike Blazer Mid Suede",
             age: "adult",
             gender: "man",
@@ -40,7 +40,7 @@ const CartPage = () => {
           },
         
           {
-            id: 2,
+            id: 4,
             name: "Nike Air Max 270",
             age: "adult",
             gender: "man",
