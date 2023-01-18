@@ -16,7 +16,7 @@
   
     }
   
-    .bookmark {
+    &__wishlist {
       position: absolute;
       cursor: pointer;
     }
@@ -125,6 +125,9 @@
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
+  &-title {
+    margin: 0;
+  }
 }
 &__size {
   display: flex;
@@ -139,10 +142,11 @@
     color: #ffffff;
     margin-right: 2px;
     text-align: center;
-    .active {
-      background: $green;
-    }
   }
+}
+
+.active {
+  background: $green;
 }
 
 .btn__add {
