@@ -7,46 +7,40 @@ import {addOneToCart} from '../../redux/redusers/cartReducer';
 
 const Card = ({id, image, description, price, name, size}) => {
 const [dropDown, setDropDown] = useState(false)
-const [activeSize, setActiveSize] = React.useState(0);
+const [activeSize, setActiveSize] = React.useState();
 const dispatch = useDispatch()
 const cartItem = useSelector(state => state.cart.itemInCart.find(item => item.id === id))
 const sizeRef = useRef()
+console.log(sizeRef)
 
-const addedQuantity = cartItem ? cartItem.addedQuantity : 0;
-
-    const onClickAdd = () => {
-        const item = {
-            id,
-            name, 
-            price,
-            image,
-            sizes: size[activeSize]
-        };
-        dispatch(addOneToCart(item))
-        setDropDown(false)
-        setActiveSize()
+const onClickAdd = () => {
+    const item = {
+        id,
+        name, 
+        price,
+        image,
+        size: size[activeSize]
+    };
+    dispatch(addOneToCart(item))
+    setDropDown(false)
+    setActiveSize()
     }
-
+    
     useEffect(() => {
         const handleClickOutside = (event) => {
-         if (!event.path.includes(sizeRef.current)) {
-              setDropDown(false)
-              setActiveSize()
-            }
-        }
-        document.body.addEventListener('click', handleClickOutside)
+          console.log(event.composedPath());
+          let path = event.composedPath().includes(sizeRef.current);
+          if (!path) setDropDown(false);
+        };
     
-        return () => {
-          document.body.removeEventListener('click', handleClickOutside)
-        }
-      }, [])
+        document.body.addEventListener('click', handleClickOutside);
+    
+        return () => document.body.removeEventListener('click', handleClickOutside);
+      }, []);
 
-    const showDropDown = () => {
-        setDropDown(false)
-    }
     
  return (
-    <div className="card" ref={sizeRef}>
+    <div className="card"  ref={sizeRef}>
         <div className="card__wishlist">
             <img src={Bookmark} alt="bookmark"/>
         </div>
