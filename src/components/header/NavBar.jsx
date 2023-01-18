@@ -5,6 +5,7 @@ import User from '../../assets/img/icons-navbar/user.svg'
 import { NavLink } from 'react-router-dom';
 import { CART_ROUTE } from '../../utils/consts';
 import { useSelector } from 'react-redux';
+import Wishlist from '../wishlist/Wishlist';
 
 
 const NavBar =() => {
@@ -18,7 +19,10 @@ const NavBar =() => {
             
             <li><span>{orderTotal}</span></li>
             
-            <li><img src={Bookmark} alt="bookmark" /></li>
+            {/* <li><img src={Bookmark} alt="bookmark" /></li> */}
+            <li> <Wishlist/></li>
+           
+            
             <li><img src={User} alt="user_icon" /></li>
           </ul>
         </nav>

@@ -1,30 +1,39 @@
 import  './card.module.scss';
 import React, { useState, useRef, useEffect } from 'react';
 import Bookmark from '../../assets/img/bookmark.svg';
+import NotBookmarked from '../../assets/img/not-bookmarked.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import {addOneToCart} from '../../redux/redusers/cartReducer';
+import { addOneToWishList } from '../../redux/redusers/wishlistReducer';
 
 
 const Card = ({id, image, description, price, name, size}) => {
 const [dropDown, setDropDown] = useState(false)
 const [activeSize, setActiveSize] = React.useState();
+const [isWishlist, setIsWishlist] = useState(false)
 const dispatch = useDispatch()
 const cartItem = useSelector(state => state.cart.itemInCart.find(item => item.id === id))
 const sizeRef = useRef()
 console.log(sizeRef)
 
 const onClickAdd = () => {
-    const item = {
-        id,
-        name, 
-        price,
-        image,
-        size: size[activeSize]
-    };
-    dispatch(addOneToCart(item))
-    setDropDown(false)
-    setActiveSize()
+    if (!activeSize) {
+        setDropDown(true)
+    } else {
+        const item = {
+            id,
+            name, 
+            price,
+            image,
+            size: size[activeSize]
+        };
+        dispatch(addOneToCart(item))
+        setDropDown(false)
+        setActiveSize()
     }
+  
+    }
+
     
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -42,7 +51,7 @@ const onClickAdd = () => {
  return (
     <div className="card"  ref={sizeRef}>
         <div className="card__wishlist">
-            <img src={Bookmark} alt="bookmark"/>
+            <img src={NotBookmarked} alt="bookmark"/>
         </div>
         <img width={133} height={112} src={image}alt="Sneakers" />
         <h5>{description}</h5>
