@@ -47,12 +47,12 @@
   }
 
   .bookmarks {
-    padding: 0;
+    padding: 20px;
     position: absolute;
      right: 0;
     right: -2.5rem;
     z-index: 10;
-    width: 20rem;
+    //width: 20rem;
     background-color: #fff;
     border-radius: 5%;
     box-shadow: 0 0.8rem 5rem 2rem rgba($color-grey-dark-1, 0.1);
@@ -63,20 +63,7 @@
   
     &__list {
       list-style: none;
-    }
-  
-    &__field {
-      cursor: pointer;
-      padding: 0 4rem;
-  
-      display: flex;
-      align-items: center;
-      height: 100%;
-      transition: all 0.3s;
-  
-      &:hover {
-        background-color: $color-grey-light-2;
-      }
+      padding-left: 0px;
     }
   
     &:hover,

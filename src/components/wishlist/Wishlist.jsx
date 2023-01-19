@@ -8,9 +8,10 @@ import Bookmark from '../../assets/img/icons-navbar/bookmark.svg'
 
 const Wishlist = ({id, image, description, price, name, size}) => {
     const itemInWishlist = useSelector(state => state.wishlist.itemInWishlist)
+    
     return (
         <>
-             <div className="nav__item">
+            <div className="nav__item">
           <button className="nav__btn nav__btn--bookmarks">
             <img src={Bookmark}/>
           </button>

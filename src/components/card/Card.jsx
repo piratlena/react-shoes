@@ -31,8 +31,23 @@ const onClickAdd = () => {
         setDropDown(false)
         setActiveSize()
     }
-  
-    }
+}
+
+const onWishlist = () => {
+if(!isWishlist) {
+    setIsWishlist(true)
+    const item = {
+        id,
+        name, 
+        price,
+        image,
+    };
+    dispatch(addOneToWishList(item))
+} else {
+    setIsWishlist(false)
+}     
+}
+
 
     
     useEffect(() => {
@@ -50,8 +65,10 @@ const onClickAdd = () => {
     
  return (
     <div className="card"  ref={sizeRef}>
-        <div className="card__wishlist">
-            <img src={NotBookmarked} alt="bookmark"/>
+        <div onClick={onWishlist} className="card__wishlist">
+            {!isWishlist ?
+            <img src={NotBookmarked} alt="bookmark"/>:
+            <img src={Bookmark} alt="bookmark"/>}
         </div>
         <img width={133} height={112} src={image}alt="Sneakers" />
         <h5>{description}</h5>
