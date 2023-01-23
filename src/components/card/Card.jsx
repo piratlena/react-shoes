@@ -4,10 +4,10 @@ import Bookmark from '../../assets/img/bookmark.svg';
 import NotBookmarked from '../../assets/img/not-bookmarked.svg'
 import { useDispatch, useSelector } from 'react-redux';
 import {addOneToCart} from '../../redux/redusers/cartReducer';
-import { addOneToWishList } from '../../redux/redusers/wishlistReducer';
+import { addOneToWishList, removeOneFromWishlist } from '../../redux/redusers/wishlistReducer';
 
 
-const Card = ({id, image, description, price, name, size}) => {
+const Card = ({id, image, description, price, name, size, gender}) => {
 const [dropDown, setDropDown] = useState(false)
 const [activeSize, setActiveSize] = React.useState();
 const [isWishlist, setIsWishlist] = useState(false)
@@ -25,7 +25,7 @@ const onClickAdd = () => {
             name, 
             price,
             image,
-            size: size[activeSize]
+            sizes: size[activeSize]
         };
         dispatch(addOneToCart(item))
         setDropDown(false)
@@ -41,9 +41,13 @@ if(!isWishlist) {
         name, 
         price,
         image,
+        description,
+        gender,
+        size
     };
     dispatch(addOneToWishList(item))
 } else {
+    dispatch(removeOneFromWishlist(id))
     setIsWishlist(false)
 }     
 }
@@ -52,7 +56,6 @@ if(!isWishlist) {
     
     useEffect(() => {
         const handleClickOutside = (event) => {
-          console.log(event.composedPath());
           let path = event.composedPath().includes(sizeRef.current);
           if (!path) setDropDown(false);
         };

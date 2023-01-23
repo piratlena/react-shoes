@@ -6,9 +6,9 @@ import './wishlist.module.scss';
 import Bookmark from '../../assets/img/icons-navbar/bookmark.svg'
 
 
-const Wishlist = ({id, image, description, price, name, size}) => {
+const Wishlist = () => {
     const itemInWishlist = useSelector(state => state.wishlist.itemInWishlist)
-    
+    console.log(itemInWishlist)
     return (
         <>
             <div className="nav__item">

@@ -1,7 +1,20 @@
-import React from "react"
-import './preview.module.scss'
+import React, { useState, useRef, useEffect } from 'react';
+import './preview.module.scss';
+import Bookmark from '../../assets/img/bookmark.svg';
+import NotBookmarked from '../../assets/img/not-bookmarked.svg';
+import { useDispatch, useSelector } from 'react-redux';
+import {addOneToCart} from '../../redux/redusers/cartReducer';
+import { addOneToWishList, removeOneFromWishlist } from '../../redux/redusers/wishlistReducer';
 
-const  Preview = ({description, image, id, price}) => {
+const  Preview = ({name, image,price, id}) => {
+const dispatch = useDispatch()
+const isOnWishlist = useSelector(state => state.wishlist.isWishlist)
+console.log(isOnWishlist)
+
+    const onWishlist = () => {
+        dispatch(removeOneFromWishlist(id))
+            
+    }
    
     return (
     <div className="preview">
@@ -14,11 +27,13 @@ const  Preview = ({description, image, id, price}) => {
             </div>
 
                 <div className="preview__data">
-                    <div className="preview__title">{description}</div>
+                    <div className="preview__title">{name}</div>
                     <div className="preview__price">{price}</div>
                 
                 </div>
-                <img className="removeBtn" src="img/btn-remove.svg" alt="remove" />
+                <div onClick={onWishlist} className="removeBtn"alt="remove">
+                    {!isOnWishlist ?  <img src={Bookmark}/> : <img src={NotBookmarked}/> }
+                </div>
 
         
     </div>

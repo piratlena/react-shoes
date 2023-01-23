@@ -29,10 +29,12 @@ const wishlistSlice = createSlice({
             state.isWishlist=true
         },
         removeOneFromWishlist(state, action) {
-            state.itemInCart = state.itemInWishlist.filter(item => item.id !== action.payload)
+            state.itemInWishlist = state.itemInWishlist.filter(item => item.id !== action.payload)
+            state.isWishlist = false
         },
         claerWishlist (state) {
             state.itemInWishlist = []
+            state.isWishlist = false
         }
     }
     

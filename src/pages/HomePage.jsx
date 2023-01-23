@@ -24,6 +24,7 @@ const HomePage = () => {
             price={obj.price}
             id={obj.id}
             size={obj.size}
+            name={obj.name}
             />
         ))
       }
