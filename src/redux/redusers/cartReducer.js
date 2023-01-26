@@ -26,9 +26,14 @@ const cartSlice = createSlice({
         },
         removeOneFromCart(state, action) {
             state.itemInCart = state.itemInCart.filter(item => item.id !== action.payload)
+            state.orderSummary = state.itemInCart.reduce((sum, item) => {
+                return (item.price * item.quantity) + sum;
+            }, 0)
         },
         claerCart (state) {
             state.itemInCart = []
+            state.orderSummary = 0
+            state.orderTotal = 0
         },
         plusItem (state, action) {
             const findItem = state.itemInCart.find(obj => obj.id === action.payload)
@@ -42,10 +47,13 @@ const cartSlice = createSlice({
             
             if (findItem) {
                 findItem.quantity--
-                if (findItem.quantity < 0) {
-                    findItem.quantity = 0
+                if (findItem.quantity < 1) {
+                    findItem.quantity = 1
                 }
             }
+            state.orderSummary = state.itemInCart.reduce((sum, item) => {
+                return (item.price * item.quantity) + sum;
+            }, 0)
         }
     }
     
