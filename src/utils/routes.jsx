@@ -3,7 +3,7 @@ import AuthPage from '../pages/AuthPage'
 import CartPage from '../pages/cart-page/CartPage'
 import HomePage from '../pages/HomePage'
 import ProductPage from '../pages/ProductPage'
-import WishlistPage from '../pages/WishlistPage'
+import WishlistPage from '../pages/wishlist-page/WishlistPage'
 import ProfilePage from '../pages/ProfilePage'
 import { PROFILE_ROUTE, CART_ROUTE, HOME_ROUTE, LOGIN_ROUTE, REGISTRATION_ROUTE, PRODUCT_ROUTE, WISHLIST_ROUTE } from './consts'
 
