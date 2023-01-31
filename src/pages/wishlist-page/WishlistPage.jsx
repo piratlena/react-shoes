@@ -17,7 +17,7 @@ const WishlistPage = () => {
           itemInWishlist.map((item) => <Preview key={item.id} {...item} />)
         ) : (
           <div className="wishlist__empty">
-            <h2>Your Shopping Cart is Empty</h2>
+            <h2>Your WishList Cart is Empty</h2>
             <NavLink to={HOME_ROUTE}>
               <button className="wishlist__btn-shop">Shop Now</button>
             </NavLink>

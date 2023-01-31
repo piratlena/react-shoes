@@ -57,7 +57,7 @@ const HomePage = () => {
               ))
           : "Это все"}
       </div>
-      <div className="pages">{pagItems}</div>;{/* <Pagination /> */}
+      <div className="pages">{pagItems}</div>
     </div>
   );
 };

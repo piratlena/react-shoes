@@ -3,7 +3,10 @@ import React, { useState, useRef, useEffect } from "react";
 import Bookmark from "../../assets/img/bookmark.svg";
 import NotBookmarked from "../../assets/img/not-bookmarked.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { addOneToCart } from "../../redux/redusers/cartReducer";
+import {
+  addOneToCart,
+  removeOneFromCart,
+} from "../../redux/redusers/cartReducer";
 import {
   addOneToWishList,
   removeOneFromWishlist,
@@ -13,6 +16,7 @@ const Card = ({ id, image, description, price, name, size, gender }) => {
   const [dropDown, setDropDown] = useState(false);
   const [activeSize, setActiveSize] = React.useState();
   const [isWishlist, setIsWishlist] = useState(false);
+  const [inCart, setInCart] = useState(false);
   const { itemInWishlist } = useSelector((state) => state.wishlist);
 
   const dispatch = useDispatch();
@@ -37,6 +41,7 @@ const Card = ({ id, image, description, price, name, size, gender }) => {
       dispatch(addOneToCart(item));
       setDropDown(false);
       setActiveSize();
+      setInCart(true);
     }
   };
 
@@ -57,6 +62,11 @@ const Card = ({ id, image, description, price, name, size, gender }) => {
       dispatch(removeOneFromWishlist(id));
       setIsWishlist(false);
     }
+  };
+
+  const onClickRemove = () => {
+    dispatch(removeOneFromCart(id));
+    setInCart(false);
   };
 
   useEffect(() => {
@@ -86,10 +96,23 @@ const Card = ({ id, image, description, price, name, size, gender }) => {
           <span>Цена</span>
           <b>{price}</b>
         </div>
-        <div
-          className="card__plus"
-          onClick={() => setDropDown(!dropDown)}
-        ></div>
+        {inCart ? (
+          <div className="card__done" onClick={onClickRemove}>
+            <svg
+              data-name="Capa 1"
+              id="Capa_1"
+              viewBox="0 0 20 19.84"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M15.39,5.66a.37.37,0,0,0-.52,0L8,13.39,5.09,11.06a.38.38,0,1,0-.47.59L7.85,14.2a.38.38,0,0,0,.52,0l7.06-8A.38.38,0,0,0,15.39,5.66Z" />
+            </svg>
+          </div>
+        ) : (
+          <div
+            className="card__plus"
+            onClick={() => setDropDown(!dropDown)}
+          ></div>
+        )}
         {dropDown && (
           <div className="card__popup">
             <p className="card__popup-title">Выберите размер</p>
