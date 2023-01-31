@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.pages {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  .page,
+  .current-page {
+    display: block;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    border: 1px solid #21d190;
+    border-radius: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:hover {
+      color: #21d190;
+    }
+  }
+  .current-page {
+    border: 1px solid #d65bca;
+  }
+}
