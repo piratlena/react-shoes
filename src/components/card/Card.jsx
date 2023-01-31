@@ -19,6 +19,7 @@ const Card = ({ id, image, description, price, name, size, gender }) => {
   const cartItem = useSelector((state) =>
     state.cart.itemInCart.find((item) => item.id === id)
   );
+
   const sizeRef = useRef();
   console.log(sizeRef);
 

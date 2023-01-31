@@ -27,7 +27,9 @@ const CartPage = () => {
             itemInCart.map((obj) => <CardInCart key={obj.id} {...obj} />)
           ) : (
             <div className="cart__empty">
-              <div className="cart__status">Your Shopping Cart is Empty</div>
+              <div className="cart__status">
+                Your Shopping Cart is Empty. Go find some great sneakers
+              </div>
               <NavLink to={HOME_ROUTE}>
                 <button className="cart__shop">Shop Now</button>
               </NavLink>

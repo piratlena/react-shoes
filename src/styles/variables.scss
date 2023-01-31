@@ -1,17 +1,52 @@
-$green: #9DD458;
+$green: #9dd458;
+
+$slider1: #c8d6e5;
+$slider2: #8ae9b3;
+$slidergrad: linear-gradient(
+  to right bottom,
+  $slider1 0%,
+  $slider2 50%,
+  $slider2 100%
+);
+
+$btnslider1: #05d6d9;
+$btnslider2: #21d190;
+$btngrad: linear-gradient(
+  90deg,
+  $btnslider1 0%,
+  $btnslider2 50%,
+  $btnslider2 100%
+);
+$btnslider3: #d65bca;
+$btnslider4: #21d190;
+$btngrad2: linear-gradient(
+  90deg,
+  $btnslider3 0%,
+  $btnslider3 50%,
+  $btnslider4 100%
+);
 
 $color-primary: #33dd4e;
-$color-grad-1:  #89F09C;
-$color-grad-2:  #3CC755;
+$color-grad-1: #89f09c;
+$color-grad-2: #3cc755;
 $color-grad-3: #e4fd02;
 
-$gradient: linear-gradient(to right bottom, $color-grad-1 0%, $color-grad-2 50%, $color-grad-2 100%);
-$gradient1: linear-gradient(to right bottom, $color-grad-1 0%, $color-grad-1,50% $color-grad-2 100%);
-
+$gradient: linear-gradient(
+  to right bottom,
+  $color-grad-1 0%,
+  $color-grad-2 50%,
+  $color-grad-2 100%
+);
+$gradient3: linear-gradient(
+  90deg,
+  $color-grad-1 0%,
+  $color-grad-1 50%,
+  50% $color-grad-2 100%
+);
 
 $color-primary: #33dd4e;
-$color-grad-1:  #5dfa86;
-$color-grad-2:  #33dd4e;
+$color-grad-1: #5dfa86;
+$color-grad-2: #33dd4e;
 $color-grad-3: #e4fd02;
 
 $color-grey-light-1: #f8f9f3; // Light background
@@ -20,9 +55,24 @@ $color-grey-light-3: #d3c7c3; // Light text (placeholder)
 $color-grey-dark-1: #615551; // Normal text
 $color-grey-dark-2: #918581; // Lighter text
 
-$gradient: linear-gradient(to right bottom, $color-grad-3 0%, $color-grad-2 50%, $color-grad-1 100%);
-$gradient1: linear-gradient(to right bottom, $color-grad-2, $color-grad-2,50% $color-grad-3);
-$gradient2:  linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+$gradient: linear-gradient(
+  to right bottom,
+  $color-grad-3 0%,
+  $color-grad-2 50%,
+  $color-grad-1 100%
+);
+$gradient1: linear-gradient(
+  to right bottom,
+  $color-grad-2,
+  $color-grad-2,
+  50% $color-grad-3
+);
+$gradient2: linear-gradient(
+  90deg,
+  rgba(131, 58, 180, 1) 0%,
+  rgba(253, 29, 29, 1) 50%,
+  rgba(252, 176, 69, 1) 100%
+);
 
 $bp-large: 78.15em; // 1250px
 $bp-medium: 61.25em; // 980px
